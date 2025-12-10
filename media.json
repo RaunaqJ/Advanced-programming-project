@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "The Shawshank Redemption",
+        "publication_date": "1994",
+        "author": "Frank Darabont",
+        "category": "Film"
+    },
+    {
+        "id": 2,
+        "name": "The Godfather",
+        "publication_date": "1972",
+        "author": "Francis Ford Coppola",
+        "category": "Film"
+    },
+    {
+        "id": 3,
+        "name": "Pulp Fiction",
+        "publication_date": "1994",
+        "author": "Quentin Tarantino",
+        "category": "Film"
+    }
+]
