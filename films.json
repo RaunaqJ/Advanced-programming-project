@@ -5,6 +5,8 @@
     "director": "Frank Darabont",
     "year": 1994,
     "category": "Drama",
+    "runtime": 142,
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -13,6 +15,8 @@
     "director": "Francis Ford Coppola",
     "year": 1972,
     "category": "Crime",
+    "runtime": 175,
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his youngest son.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -21,6 +25,8 @@
     "director": "Christopher Nolan",
     "year": 2008,
     "category": "Action",
+    "runtime": 152,
+    "description": "Batman faces a new menace: the Joker, a criminal mastermind who wants to plunge Gotham into anarchy and chaos.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -29,6 +35,8 @@
     "director": "Christopher Nolan",
     "year": 2010,
     "category": "Sci-Fi",
+    "runtime": 148,
+    "description": "A skilled thief leads a team to infiltrate the dreams of a corporate executive to plant an idea in his mind.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -37,6 +45,8 @@
     "director": "Christopher Nolan",
     "year": 2014,
     "category": "Sci-Fi",
+    "runtime": 169,
+    "description": "A team of astronauts travel through a wormhole near Saturn in search of a new home for humanity.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -45,6 +55,8 @@
     "director": "Quentin Tarantino",
     "year": 1994,
     "category": "Crime",
+    "runtime": 154,
+    "description": "The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -53,6 +65,8 @@
     "director": "Lana Wachowski, Lilly Wachowski",
     "year": 1999,
     "category": "Sci-Fi",
+    "runtime": 136,
+    "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -61,6 +75,8 @@
     "director": "Robert Zemeckis",
     "year": 1994,
     "category": "Drama",
+    "runtime": 142,
+    "description": "The life story of a man with a low IQ but good intentions, spanning from the 1950s to the 1990s.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -69,6 +85,8 @@
     "director": "Joss Whedon",
     "year": 2012,
     "category": "Action",
+    "runtime": 143,
+    "description": "Earth's mightiest heroes must come together to defeat a powerful alien threat to save the planet.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -77,6 +95,8 @@
     "director": "James Cameron",
     "year": 2009,
     "category": "Sci-Fi",
+    "runtime": 162,
+    "description": "A paraplegic Marine dispatched to the moon Pandora falls in love with an alien woman and must fight his own people.",
     "created_at": "2025-12-06T00:00:00"
   },
   {
@@ -85,6 +105,98 @@
     "director": "James Cameron",
     "year": 1997,
     "category": "Romance",
+    "runtime": 194,
+    "description": "A poor artist and a rich woman fall in love aboard the doomed RMS Titanic and struggle to survive its sinking.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "12",
+    "name": "Spirited Away",
+    "director": "Hayao Miyazaki",
+    "year": 2001,
+    "category": "Animation",
+    "runtime": 125,
+    "description": "A young girl must navigate a magical bathhouse and rescue her parents who have been turned into pigs.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "13",
+    "name": "Gladiator",
+    "director": "Ridley Scott",
+    "year": 2000,
+    "category": "Action",
+    "runtime": 155,
+    "description": "A former Roman General is betrayed and enslaved, rising as a gladiator to seek revenge against the corrupt emperor.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "14",
+    "name": "The Lion King",
+    "director": "Roger Allers",
+    "year": 1994,
+    "category": "Animation",
+    "runtime": 88,
+    "description": "Lion prince Simba flees his kingdom after his father's death, only to discover the truth and reclaim his throne.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "15",
+    "name": "Jurassic Park",
+    "director": "Steven Spielberg",
+    "year": 1993,
+    "category": "Action",
+    "runtime": 127,
+    "description": "A billionaire invites scientists to a theme park with cloned dinosaurs, leading to chaos when the dinosaurs escape.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "16",
+    "name": "The Shining",
+    "director": "Stanley Kubrick",
+    "year": 1980,
+    "category": "Drama",
+    "runtime": 146,
+    "description": "A family isolated in a hotel during winter encounters supernatural forces that drive the father toward madness.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "17",
+    "name": "Fight Club",
+    "director": "David Fincher",
+    "year": 1999,
+    "category": "Drama",
+    "runtime": 139,
+    "description": "An insomniac office worker forms an underground fight club that evolves into something far more dangerous.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "18",
+    "name": "The Godfather Part II",
+    "director": "Francis Ford Coppola",
+    "year": 1974,
+    "category": "Crime",
+    "runtime": 200,
+    "description": "The early life of Vito Corleone and the rise of Michael Corleone within their crime family.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "19",
+    "name": "Se7en",
+    "director": "David Fincher",
+    "year": 1995,
+    "category": "Crime",
+    "runtime": 127,
+    "description": "Two detectives hunt a serial killer who uses the seven deadly sins as his killing method.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "20",
+    "name": "The Lord of the Rings",
+    "director": "Peter Jackson",
+    "year": 2001,
+    "category": "Action",
+    "runtime": 178,
+    "description": "A hobbit and his companions embark on an epic quest to destroy a powerful ring and save Middle-earth.",
     "created_at": "2025-12-06T00:00:00"
   }
 ]
