@@ -198,5 +198,305 @@
     "runtime": 178,
     "description": "A hobbit and his companions embark on an epic quest to destroy a powerful ring and save Middle-earth.",
     "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "21",
+    "name": "The Shawshank Redemption 2",
+    "director": "Frank Darabont",
+    "year": 1995,
+    "category": "Drama",
+    "runtime": 138,
+    "description": "Continuation of the powerful story of hope and friendship within prison walls.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "22",
+    "name": "Life is Beautiful",
+    "director": "Roberto Benigni",
+    "year": 1997,
+    "category": "Drama",
+    "runtime": 116,
+    "description": "A father uses his imagination to shield his son from the horrors of a concentration camp.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "23",
+    "name": "The Pursuit of Happyness",
+    "director": "Gabriele Muccino",
+    "year": 2006,
+    "category": "Drama",
+    "runtime": 117,
+    "description": "A struggling salesman takes custody of his son and forms an unlikely bond while chasing his dreams.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "24",
+    "name": "Goodfellas",
+    "director": "Martin Scorsese",
+    "year": 1990,
+    "category": "Crime",
+    "runtime": 146,
+    "description": "The rise and fall of a mobster as told by a gangster and his associates in the Italian-American mob.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "25",
+    "name": "The Departed",
+    "director": "Martin Scorsese",
+    "year": 2006,
+    "category": "Crime",
+    "runtime": 151,
+    "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "26",
+    "name": "Scarface",
+    "director": "Brian De Palma",
+    "year": 1983,
+    "category": "Crime",
+    "runtime": 170,
+    "description": "A Cuban refugee rises through the Miami cocaine trade, eventually becoming a powerful drug lord.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "27",
+    "name": "Mission: Impossible",
+    "director": "Brian De Palma",
+    "year": 1996,
+    "category": "Action",
+    "runtime": 110,
+    "description": "An American agent is disavowed and must work alone to expose a traitor within his agency.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "28",
+    "name": "Die Hard",
+    "director": "John McTiernan",
+    "year": 1988,
+    "category": "Action",
+    "runtime": 131,
+    "description": "A cop must battle terrorists who have taken over a Los Angeles skyscraper on Christmas Eve.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "29",
+    "name": "Mad Max Fury Road",
+    "director": "George Miller",
+    "year": 2015,
+    "category": "Action",
+    "runtime": 120,
+    "description": "In a post-apocalyptic wasteland, a man leads a group of rebels in an epic chase to escape a tyrannical ruler.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "30",
+    "name": "The Terminator",
+    "director": "James Cameron",
+    "year": 1984,
+    "category": "Sci-Fi",
+    "runtime": 107,
+    "description": "A cyborg assassin travels back in time to kill a woman whose son will lead the human resistance against machines.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "31",
+    "name": "Blade Runner",
+    "director": "Ridley Scott",
+    "year": 1982,
+    "category": "Sci-Fi",
+    "runtime": 117,
+    "description": "A blade runner must track down and eliminate four escaped replicants in a dystopian future Los Angeles.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "32",
+    "name": "Dune",
+    "director": "Denis Villeneuve",
+    "year": 2021,
+    "category": "Sci-Fi",
+    "runtime": 166,
+    "description": "A young noble must travel to a dangerous desert planet to protect his family and secure their future.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "33",
+    "name": "The Notebook",
+    "director": "Nick Cassavetes",
+    "year": 2004,
+    "category": "Romance",
+    "runtime": 123,
+    "description": "Two people from different social classes fall in love despite their families' opposition.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "34",
+    "name": "La La Land",
+    "director": "Damien Chazelle",
+    "year": 2016,
+    "category": "Romance",
+    "runtime": 128,
+    "description": "A pianist and a struggling actress fall in love while pursuing their dreams in Los Angeles.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "35",
+    "name": "Pride and Prejudice",
+    "director": "Joe Wright",
+    "year": 2005,
+    "category": "Romance",
+    "runtime": 127,
+    "description": "Elizabeth Bennet finds love with Mr. Darcy while navigating social expectations and family pressures.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "36",
+    "name": "The Eternal Sunshine of the Spotless Mind",
+    "director": "Michel Gondry",
+    "year": 2004,
+    "category": "Romance",
+    "runtime": 108,
+    "description": "After a breakup, a man undergoes a procedure to erase memories of his lost love.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "37",
+    "name": "Frozen",
+    "director": "Chris Buck, Jennifer Lee",
+    "year": 2013,
+    "category": "Animation",
+    "runtime": 102,
+    "description": "Two sisters, one with ice powers, embark on an epic journey to save their frozen kingdom.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "38",
+    "name": "Toy Story",
+    "director": "John Lasseter",
+    "year": 1995,
+    "category": "Animation",
+    "runtime": 81,
+    "description": "A toy cowboy and a modern space toy learn to work together to survive and return home to their owner.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "39",
+    "name": "Coco",
+    "director": "Lee Unkrich",
+    "year": 2017,
+    "category": "Animation",
+    "runtime": 105,
+    "description": "A young musician travels to the Land of the Dead to uncover his family's hidden history.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "40",
+    "name": "The Shawshank Redemption",
+    "director": "Frank Darabont",
+    "year": 1994,
+    "category": "Drama",
+    "runtime": 142,
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "41",
+    "name": "American Beauty",
+    "director": "Sam Mendes",
+    "year": 1999,
+    "category": "Drama",
+    "runtime": 122,
+    "description": "A suburban father enters a mid-life crisis and becomes obsessed with a teenage girl.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "42",
+    "name": "The Usual Suspects",
+    "director": "Bryan Singer",
+    "year": 1995,
+    "category": "Crime",
+    "runtime": 106,
+    "description": "A group of criminals are forced to help an unseen crime boss in a plot to rob a ship.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "43",
+    "name": "Training Day",
+    "director": "Antoine Fuqua",
+    "year": 2001,
+    "category": "Crime",
+    "runtime": 122,
+    "description": "A rookie cop is paired with a corrupt detective for a day of corruption and violence.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "44",
+    "name": "The Matrix Reloaded",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "year": 2003,
+    "category": "Sci-Fi",
+    "runtime": 138,
+    "description": "Neo and his team are back to fight against the machines that have subjugated humanity.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "45",
+    "name": "Minority Report",
+    "director": "Steven Spielberg",
+    "year": 2002,
+    "category": "Sci-Fi",
+    "runtime": 145,
+    "description": "In a future where crime is prevented, a cop is accused of a murder he hasn't committed yet.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "46",
+    "name": "Fast & Furious",
+    "director": "Justin Lin",
+    "year": 2009,
+    "category": "Action",
+    "runtime": 107,
+    "description": "Former cop John Toretto and his crew pull off an impossible heist against a powerful crime boss.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "47",
+    "name": "The Proposal",
+    "director": "Anne Fletcher",
+    "year": 2009,
+    "category": "Romance",
+    "runtime": 108,
+    "description": "A high-powered executive forces her assistant to marry her to avoid deportation to Canada.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "48",
+    "name": "Mulan",
+    "director": "Tony Bancroft, Barry Cook",
+    "year": 1998,
+    "category": "Animation",
+    "runtime": 88,
+    "description": "A young woman disguises herself as a man to fight in the army and protect her aging father.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "49",
+    "name": "Inside Out",
+    "director": "Pete Docter, Ronnie Del Carmen",
+    "year": 2015,
+    "category": "Animation",
+    "runtime": 98,
+    "description": "A girl's emotions guide her through the transition to a new city.",
+    "created_at": "2025-12-06T00:00:00"
+  },
+  {
+    "id": "50",
+    "name": "The Sixth Sense",
+    "director": "M. Night Shyamalan",
+    "year": 1999,
+    "category": "Drama",
+    "runtime": 107,
+    "description": "A child psychologist works with a young boy who can see dead people.",
+    "created_at": "2025-12-06T00:00:00"
   }
 ]
