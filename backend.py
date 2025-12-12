@@ -128,15 +128,17 @@ def create_media():
         
         media_list = load_media()
         
-        # Generate new ID
+        # Generate new ID (as integer)
         new_id = max([int(m.get('id', 0)) if isinstance(m.get('id'), (int, str)) else 0 for m in media_list], default=0) + 1
         
         new_media = {
-            'id': str(new_id),
+            'id': new_id,
             'name': data['name'],
             'year': data.get('year') or data.get('publication_date', ''),
             'director': data.get('director') or data.get('author', ''),
             'category': data['category'],
+            'runtime': data.get('runtime', ''),
+            'description': data.get('description', ''),
             'created_at': datetime.now().isoformat()
         }
         
@@ -239,4 +241,4 @@ if __name__ == '__main__':
         ]
         save_media(sample_data)
     
-    app.run(debug=True, port=5000)
+    app.run(debug=False, port=5000)
