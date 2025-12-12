@@ -5,7 +5,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-DATA_FILE = 'media.json'
+DATA_FILE = 'films.json'
 
 def load_media():
     """Load media data from JSON file"""

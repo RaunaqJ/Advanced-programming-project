@@ -78,9 +78,9 @@ class FilmCinemaxApp(QMainWindow):
     
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("🎬 Film Cinemax - by Raunaq")
+        self.setWindowTitle("Film Box")
         self.setGeometry(100, 100, 1000, 700)
-        self.base_url = "http://localhost:8000/api"
+        self.base_url = "http://localhost:5000/api"
         self.selected_film_id = None
         self.retry_count = 0
         self.init_ui()
@@ -95,7 +95,7 @@ class FilmCinemaxApp(QMainWindow):
         main_layout = QVBoxLayout()
         
         # Title
-        title = QLabel("🎬 Film Cinemax - by Raunaq")
+        title = QLabel("Film Box")
         title_font = QFont()
         title_font.setPointSize(16)
         title_font.setBold(True)
@@ -162,7 +162,11 @@ class FilmCinemaxApp(QMainWindow):
             url = f"{self.base_url}{endpoint}"
             response = requests.request(method, url, timeout=10, **kwargs)
             if response.status_code == 200 or response.status_code == 201:
-                return response.json()
+                data = response.json()
+                # Extract the 'data' field if the response has it
+                if isinstance(data, dict) and 'data' in data:
+                    return data['data']
+                return data
             else:
                 self.status_label.setText(f"Server error: {response.status_code}")
                 return None
@@ -170,7 +174,7 @@ class FilmCinemaxApp(QMainWindow):
             self.status_label.setText("Connection timeout - Flask might still be starting")
             return None
         except requests.exceptions.ConnectionError:
-            self.status_label.setText("Cannot connect to Flask on localhost:8000")
+            self.status_label.setText("Cannot connect to Flask on localhost:5000")
             return None
         except Exception as e:
             self.status_label.setText(f"Error: {str(e)}")
@@ -178,7 +182,7 @@ class FilmCinemaxApp(QMainWindow):
     
     def load_all_films(self):
         """Load all films from backend"""
-        response = self.make_request('GET', '/films')
+        response = self.make_request('GET', '/media')
         if response:
             self.display_films(response)
             self.status_label.setText(f"Loaded {len(response)} films")
@@ -187,7 +191,7 @@ class FilmCinemaxApp(QMainWindow):
     
     def load_all_films_with_retry(self):
         """Load films with automatic retry"""
-        response = self.make_request('GET', '/films')
+        response = self.make_request('GET', '/media')
         if response:
             self.display_films(response)
             self.status_label.setText(f"✓ Loaded {len(response)} films")
@@ -206,7 +210,7 @@ class FilmCinemaxApp(QMainWindow):
         if category == "All":
             self.load_all_films()
         else:
-            response = self.make_request('GET', f'/films?category={category}')
+            response = self.make_request('GET', f'/media/category/{category}')
             if response:
                 self.display_films(response)
                 self.status_label.setText(f"Loaded {len(response)} films in {category}")
@@ -233,9 +237,13 @@ class FilmCinemaxApp(QMainWindow):
         for i, film in enumerate(films):
             self.table.insertRow(i)
             self.table.setItem(i, 0, QTableWidgetItem(film['name']))
-            self.table.setItem(i, 1, QTableWidgetItem(film['director']))
-            self.table.setItem(i, 2, QTableWidgetItem(str(film['year'])))
-            self.table.setItem(i, 3, QTableWidgetItem(film['category']))
+            # Use 'author' if 'director' doesn't exist (backend uses 'author')
+            director = film.get('director') or film.get('author', 'N/A')
+            self.table.setItem(i, 1, QTableWidgetItem(director))
+            # Use 'publication_date' if 'year' doesn't exist
+            year = film.get('year') or film.get('publication_date', 'N/A')
+            self.table.setItem(i, 2, QTableWidgetItem(str(year)))
+            self.table.setItem(i, 3, QTableWidgetItem(film.get('category', 'Film')))
             # Store film ID in first column item
             self.table.item(i, 0).film_id = str(film['id'])
     
