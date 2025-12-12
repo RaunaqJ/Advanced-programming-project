@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Cinemax - Project Overview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: #3d3d5c;
+            padding: 30px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+        }
+
+        .logo-text {
+            display: none;
+        }
+
+        .menu-btn {
+            background: white;
+            color: #3d3d5c;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .menu-btn:hover {
+            background: #f0f0f0;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 8px;
+            display: none;
+            z-index: 1000;
+        }
+
+        .dropdown-menu.active {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #3d3d5c;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f0f0f0;
+            padding-left: 25px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #3d3d5c;
+            color: white;
+            text-align: center;
+            padding: 100px 50px;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #e0e0e0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Wave Divider */
+        .wave {
+            position: relative;
+            height: 80px;
+            background: #3d3d5c;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .wave svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        /* Content Section */
+        .content-wrapper {
+            background: #5a5a8a;
+            padding: 80px 50px;
+            min-height: 100vh;
+            display: none;
+        }
+
+        .content-wrapper.active {
+            display: block;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content h2 {
+            font-size: 44px;
+            margin-bottom: 50px;
+            text-align: center;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .project-description {
+            font-size: 15px;
+            color: #e8e8e8;
+            margin-bottom: 60px;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .image-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container svg {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .image-caption {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d2d3d;
+            text-align: center;
+            padding: 30px 50px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .images-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            header {
+                padding: 20px 30px;
+            }
+
+            .hero {
+                padding: 60px 30px;
+            }
+
+            .content-wrapper {
+                padding: 40px 30px;
+            }
+
+            .content h2 {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">🎬</div>
+            <span class="logo-text">Film Cinemax</span>
+        </div>
+        <nav>
+            <div style="position: relative;">
+                <button class="menu-btn" onclick="toggleMenu()">☰ MENU</button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <a href="#" onclick="showProjectOverview(event)">Project Overview</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-icon">⭐</div>
+        <h1>FILM CINEMAX</h1>
+        <p>A Professional Desktop Application for Managing Your Film Library</p>
+    </section>
+
+    <div class="wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M 0,40 Q 300,0 600,40 T 1200,40 L 1200,120 L 0,120 Z" fill="#5a5a8a" stroke="none"/>
+        </svg>
+    </div>
+
+    <div class="content-wrapper">
+        <section class="content" id="projectContent">
+            <h2>PROJECT OVERVIEW</h2>
+            
+            <div class="project-description">
+                <p>
+                    Film Cinemax is a comprehensive desktop application built with PyQt6 and Flask that provides a seamless solution for managing and organizing your personal film library. The application combines a modern, intuitive graphical interface with a robust backend API to deliver a professional film management experience. With 50 carefully curated films across multiple categories, users can search, filter, sort, and manage their collection with ease.
+                </p>
+            </div>
+
+            <!-- Section 1: Film Library Interface -->
+            <div style="margin-bottom: 80px;">
+                <h3 style="color: white; font-size: 32px; margin-bottom: 30px; text-align: center;">📚 The Film Library Interface</h3>
+                <div class="images-grid">
+                    <div class="image-container">
+                        <img src="Screenshot 2025-12-12 at 10.20.11 PM.png" alt="Film Library Interface" style="width: 100%; height: auto; max-width: 600px;"/>
+                        <div class="image-caption">Film Library Main Interface - View and Manage Your Collection</div>
+                    </div>
+
+                    <div>
+                        <p style="color: #e8e8e8; font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
+                            <strong style="font-size: 18px; color: #a78bfa;">📖 What You See:</strong>
+                        </p>
+                        <p style="color: #e8e8e8; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
+                            The Film Library displays all your films in an organized table with columns for <strong>Film Name</strong>, <strong>Director</strong>, <strong>Year</strong>, and <strong>Category</strong>. Each film is displayed with complete information making it easy to browse your collection at a glance.
+                        </p>
+                        <p style="color: #e8e8e8; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
+                            <strong style="color: #a78bfa;">✨ Key Features:</strong>
+                        </p>
+                        <ul style="color: #e8e8e8; font-size: 15px; line-height: 1.9; margin-left: 20px;">
+                            <li><strong>Category Filter</strong> - Dropdown to view films by Drama, Crime, Action, Sci-Fi, Romance, or Animation</li>
+                            <li><strong>Search Box</strong> - Type a film name to instantly search through your library</li>
+                            <li><strong>Search Button</strong> - Click to execute your search query</li>
+                            <li><strong>Film Selection</strong> - Click any film to see its full description and runtime</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Add Films Dialog -->
+            <div style="margin-bottom: 80px;">
+                <h3 style="color: white; font-size: 32px; margin-bottom: 30px; text-align: center;">➕ Adding New Films to Your Library</h3>
+                <div class="images-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div>
+                        <p style="color: #e8e8e8; font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
+                            <strong style="font-size: 18px; color: #a78bfa;">📝 How to Add Films:</strong>
+                        </p>
+                        <p style="color: #e8e8e8; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
+                            Click the <strong>"Add Film"</strong> button to open the film dialog. A form will appear where you can enter all the details for your new film. Simply fill in each field with the appropriate information.
+                        </p>
+                        <p style="color: #e8e8e8; font-size: 15px; line-height: 1.8; margin-bottom: 15px;">
+                            <strong style="color: #a78bfa;">📋 Required Fields:</strong>
+                        </p>
+                        <ul style="color: #e8e8e8; font-size: 14px; line-height: 1.9; margin-left: 20px;">
+                            <li><strong>Film Name</strong> - The title of the film</li>
+                            <li><strong>Director</strong> - Name of the director(s)</li>
+                            <li><strong>Year</strong> - Release year (numeric)</li>
+                            <li><strong>Category</strong> - Select from Drama, Crime, Action, Sci-Fi, Romance, Animation</li>
+                            <li><strong>Runtime</strong> - Duration in minutes (numeric)</li>
+                            <li><strong>Description</strong> - Brief synopsis of the film</li>
+                        </ul>
+                        <p style="color: #90ee90; font-size: 14px; margin-top: 15px;">
+                            ✓ Once you click <strong>"Save"</strong>, the film is instantly added to your library and saved to the database!
+                        </p>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="Screenshot 2025-12-12 at 10.06.03 PM.png" alt="Add Film Dialog" style="width: 100%; height: auto; max-width: 500px;"/>
+                        <div class="image-caption">Add Film Dialog - Complete Form for New Entries</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Key Features -->
+            <div style="margin-bottom: 80px;">
+                <h3 style="color: white; font-size: 32px; margin-bottom: 30px; text-align: center;">⚙️ Core Features & How to Use Them</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <!-- Feature 1 -->
+                    <div style="background: rgba(99, 102, 241, 0.1); padding: 30px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                        <h4 style="color: #a78bfa; font-size: 18px; margin-bottom: 15px;">🔍 Search Films</h4>
+                        <p style="color: #e8e8e8; font-size: 14px; line-height: 1.8;">
+                            Type a film name in the <strong>"Film Name"</strong> search box and click <strong>"Search"</strong> to instantly find movies matching your query. The library will filter and display only the films that match your search term.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div style="background: rgba(99, 102, 241, 0.1); padding: 30px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                        <h4 style="color: #a78bfa; font-size: 18px; margin-bottom: 15px;">🎭 Filter by Category</h4>
+                        <p style="color: #e8e8e8; font-size: 14px; line-height: 1.8;">
+                            Use the <strong>"Category"</strong> dropdown to filter films by type: Drama, Crime, Action, Sci-Fi, Romance, or Animation. Select "All" to view your entire collection. Changes are applied instantly.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div style="background: rgba(99, 102, 241, 0.1); padding: 30px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                        <h4 style="color: #a78bfa; font-size: 18px; margin-bottom: 15px;">📊 Sort Films</h4>
+                        <p style="color: #e8e8e8; font-size: 14px; line-height: 1.8;">
+                            Click the <strong>"Sort"</strong> button to access sorting options. Choose to sort by <strong>Year (Newest)</strong>, <strong>Runtime (Longest)</strong>, or <strong>Name (A-Z)</strong>. Your library will reorganize instantly.
+                        </p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div style="background: rgba(99, 102, 241, 0.1); padding: 30px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                        <h4 style="color: #a78bfa; font-size: 18px; margin-bottom: 15px;">🗑️ Delete Films</h4>
+                        <p style="color: #e8e8e8; font-size: 14px; line-height: 1.8;">
+                            Select a film from the table and click <strong>"Delete"</strong> to remove it from your library. A confirmation dialog will appear before permanent deletion to prevent accidental removal.
+                        </p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div style="background: rgba(99, 102, 241, 0.1); padding: 30px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                        <h4 style="color: #a78bfa; font-size: 18px; margin-bottom: 15px;">📖 View Description</h4>
+                        <p style="color: #e8e8e8; font-size: 14px; line-height: 1.8;">
+                            Click any film in the table to view its complete description, runtime, director, and year. A description panel will appear below the table showing all film details.
+                        </p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div style="background: rgba(99, 102, 241, 0.1); padding: 30px; border-radius: 8px; border-left: 4px solid #6366f1;">
+                        <h4 style="color: #a78bfa; font-size: 18px; margin-bottom: 15px;">💾 Persistent Storage</h4>
+                        <p style="color: #e8e8e8; font-size: 14px; line-height: 1.8;">
+                            All changes (adding, deleting, viewing) are automatically saved to the JSON database. Your film collection is preserved across sessions - everything you add stays in the library!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Quick Start Guide -->
+            <div style="background: rgba(99, 102, 241, 0.15); padding: 40px; border-radius: 8px; margin-top: 60px;">
+                <h3 style="color: #a78bfa; font-size: 24px; margin-bottom: 20px;">🚀 Quick Start Guide</h3>
+                <ol style="color: #e8e8e8; font-size: 15px; line-height: 2; margin-left: 20px;">
+                    <li>Launch the application - it will automatically load 50 films from the database</li>
+                    <li>Browse films using the table or search by name using the Search feature</li>
+                    <li>Filter films by category using the Category dropdown (Drama, Action, etc.)</li>
+                    <li>Click any film to see its detailed description and runtime information</li>
+                    <li>Sort your collection by clicking the Sort button and choosing your preference</li>
+                    <li>Add new films by clicking "Add Film" and filling the dialog with film details</li>
+                    <li>Delete unwanted films by selecting them and clicking the Delete button</li>
+                    <li>All changes are saved automatically to the film database</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Film Cinemax Project | Advanced Programming Course</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const dropdown = document.getElementById('dropdownMenu');
+            dropdown.classList.toggle('active');
+        }
+
+        function showProjectOverview(e) {
+            e.preventDefault();
+            const contentWrapper = document.querySelector('.content-wrapper');
+            const projectContent = document.getElementById('projectContent');
+            
+            contentWrapper.classList.add('active');
+            projectContent.classList.add('active');
+            
+            // Close dropdown
+            document.getElementById('dropdownMenu').classList.remove('active');
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('dropdownMenu');
+            const menuBtn = document.querySelector('.menu-btn');
+            
+            if (!menuBtn.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
